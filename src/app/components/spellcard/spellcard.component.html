@@ -1,0 +1,29 @@
+<mat-card  class="mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title>{{spell.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="line-height: 0;">
+          <!-- <div style="position: absolute; top: 0; right:0;">
+            <p>{{spell.v ? "V" : ""}}{{spell.s ? "S" : ""}}{{spell.m ? "M" : ""}}</p>
+          </div> -->
+          <p>Casting Time: <b>{{spell.castTime}}</b></p>
+          <!-- <p>Range: <b>{{spell.range}}</b></p> -->
+          <!-- <p>Components: <b>{{spell.v ? "V" : ""}}{{spell.s ? "S" : ""}}{{spell.m ? "M" : ""}}</b></p> -->
+          <p>Spell Level: <b>{{spell.spellLevel}}</b></p>
+          <mat-chip-listbox aria-label="Dog selection">
+            <mat-chip>
+              AOE
+            </mat-chip>
+            <mat-chip color="primary">
+              Heal
+            </mat-chip>
+            <mat-chip color="accent">
+              Damage
+            </mat-chip>
+          </mat-chip-listbox>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Prepare!</button>
+        </mat-card-actions>
+      </mat-card>
+
