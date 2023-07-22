@@ -1,6 +1,6 @@
 import { HostListener } from '@angular/core';
 import { Component } from '@angular/core';
-import { CastTime, Spell, SpellLevel } from 'src/models/spell';
+import { CastTime, Spell, SpellLevel, allSpells } from 'src/models/spell';
 
 @Component({
   selector: 'app-root',
@@ -36,52 +36,7 @@ export class AppComponent {
     showSomatic: boolean = true;
     showMaterial: boolean = true;
 
-    spells: Spell[] = [
-        {
-            name: 'Verbal Spell',
-            description: 'This is a spell',
-            isPrepared: true,
-            isVerbal: true,
-            isSomatic: false,
-            isMaterial: false,
-            isConcentration: false,
-            castTime: CastTime.Action,
-            spellLevel: SpellLevel.Cantrip,
-        },
-        {
-            name: 'Somatic Spell',
-            description: 'This is a spell',
-            isPrepared: true,
-            isVerbal: false,
-            isSomatic: true,
-            isMaterial: false,
-            isConcentration: true,
-            castTime: CastTime.Action,
-            spellLevel: SpellLevel.Cantrip,
-        },
-        {
-            name: 'Material Spell',
-            description: 'This is a spell',
-            isPrepared: true,
-            isVerbal: false,
-            isSomatic: false,
-            isMaterial: true,
-            isConcentration: true,
-            castTime: CastTime.Action,
-            spellLevel: SpellLevel.Cantrip,
-        },
-        {
-            name: 'Verbal Somatic Spell',
-            description: 'This is a spell',
-            isPrepared: true,
-            isVerbal: true,
-            isSomatic: true,
-            isMaterial: false,
-            isConcentration: true,
-            castTime: CastTime.Action,
-            spellLevel: SpellLevel.Cantrip,
-        },
-    ]
+    spells: Spell[] = allSpells;
     filteredSpells: Spell[] = [];
 
     ngOnInit(){
